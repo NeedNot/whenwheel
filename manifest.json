@@ -1,0 +1,25 @@
+{
+    "name": "WhenWheel",
+    "version": "1.0",
+    "description": "Lets you see when a onewheel ride happened",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png"
+      }
+    },
+    "host_permissions": [
+      "https://app.onewheel.com/rides.html"
+    ],
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://app.onewheel.com/rides.html"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
